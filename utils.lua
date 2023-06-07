@@ -48,7 +48,43 @@ Usage instructions
 Import:
 local utils = require "utils"
 
+Close databases:
+tableDatabases = utils.closeDatabases(tableDatabases)
 
+Close files:
+tableFiles = utils.closeDatabases(tableFiles)
+
+Resume timers:
+utils.resumeTimers(tableTimers)
+
+Pause timers:
+utils.pauseTimers(tableTimers)
+
+Cancel timers:
+tableTimers = utils.cancelTimers(tableTimers)
+
+Clear display group:
+utils.clearDisplayGroup(targetGroup)
+
+Clear table:
+targetTable = utils.clearTable(targetTable)
+
+Create slider widget:
+utils.createSliderControl(targetGroup, optionsSliderControl)
+
+asd
+
+Show share UI(OS dependent):
+utils.showSystemShareUI(pathShareAsset, urlLandingPage)
+
+Show QR code to a web page:
+utils.showShareQR(shareGroup, pathQRCode)
+
+Show mail UI(OS dependent):
+utils.showMailUI(mailAddress, mailSubject, mailBody)
+
+Show store 
+utils.showRateUI()
 
 ####################################
 ]]--
@@ -619,7 +655,8 @@ function utils.showRateUI()
             iOSAppId = idAppStore
         }
     else
-        local storeSupported = { "google" }
+        local targetAppStore = system.getInfo( "targetAppStore" )
+        local storeSupported = { targetAppStore }
 
         local optionsRateGame = {
             supportedAndroidStores = storeSupported
