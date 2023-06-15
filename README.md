@@ -8,11 +8,6 @@ A general purpose library that you can use in Solar2D projects with minimal modi
 local utils = require "utils"
 ```
 
-**Create slider widget**
-```sh
-utils.createSliderControl(targetGroup, optionsSliderControl)
-```
-
 **Close databases**
 ```sh
 tableDatabases = utils.closeDatabases(tableDatabases)
