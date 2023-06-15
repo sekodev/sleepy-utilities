@@ -92,8 +92,7 @@ local buttonSound = utils.createSliderControl(targetGroup, optionsSliderControl)
 
 
 Show information box:
--- Declare options for information box creation
-    local optionsInfoBox = {
+local optionsInfoBox = {
     infoFont = fontName,
     infoText = "Information text shown to the player/user",
     isPromptAvailable = isDontShowAgainPromptShown,
@@ -154,7 +153,7 @@ local mailBody = "Enter mail body here"
 utils.showMailUI(mailAddress, mailSubject, mailBody)
 
 
-Show store:
+Show store page:
 local idAppStore = "1234567890"
 utils.showRateUI(idAppStore)
 
